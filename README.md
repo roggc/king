@@ -1,5 +1,5 @@
-## princess
+## king
 
-evolution of *virgen*
+evolution of *princess*
 
-adds *ssr* and *react-router* to the capabilities
+adding content, making a website
