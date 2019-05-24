@@ -4,5 +4,7 @@ import {V1 as C} from 'comps/app/index'
 export default
 (
   ()=>
-  <C/>
+  <div>
+    <C/>
+  </div>
 )()
