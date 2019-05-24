@@ -1,6 +1,6 @@
-import hoc from 'comps/app/footer/hoc'
+import hoc from 'comps/footer/hoc'
 import React from 'react'
-import style from 'comps/app/footer/style'
+import style from 'comps/footer/style'
 
 const v1=
 ({children,content,...rest})=>

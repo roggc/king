@@ -1,9 +1,9 @@
 import hoc from 'comps/app/hoc'
 import React from 'react'
 import style from 'comps/app/style'
-import {V1 as Header} from 'comps/app/header/index'
+import {V1 as Header} from 'comps/header/index'
 import {V1 as Content} from 'comps/app/content/index'
-import {V1 as Footer} from 'comps/app/footer/index'
+import {V1 as Footer} from 'comps/footer/index'
 
 const v1=
 ({children,...rest})=>

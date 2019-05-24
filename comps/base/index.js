@@ -3,9 +3,9 @@ import React from 'react'
 import style from 'comps/base/style'
 
 const v1=
-({children,...rest})=>
+({children,content,...rest})=>
 <div {...rest}>
-  base
+  {content}
 </div>
 
 export const V1=hoc(v1)

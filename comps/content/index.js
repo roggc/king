@@ -1,6 +1,6 @@
-import hoc from 'comps/app/content/hoc'
+import hoc from 'comps/content/hoc'
 import React from 'react'
-import style from 'comps/app/content/style'
+import style from 'comps/content/style'
 
 const v1=
 ({children,content,...rest})=>

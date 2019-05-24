@@ -1,12 +1,7 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-export default C=>
-class extends React.Component
+export default C=>({children,...rest})=>
 {
-  constructor(props)
-  {
-    super(props)
-    this.state={}
-    this.render=()=><C {...this.props}>{{...this.state}}</C>
-  }
+  const [state,setState]=useState({})
+  return <C {...rest}>{{...state,...children}}</C>
 }
