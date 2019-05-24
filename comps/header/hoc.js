@@ -9,13 +9,13 @@ export default C=>({children,...rest})=>
       showMenu:false
     }
   )
-  const innerRef = useRef(null)
+  const menuRef = useRef(null)
   useClickOutside
   (
-    (e) => onClickMenu(undefined,true),
-    innerRef
+    (e) => menuClick(undefined,true),
+    menuRef
   )
-  const onClickMenu=(e,hide=false)=>
+  const menuClick=(e,hide=false)=>
   {
     setState
     (
@@ -25,10 +25,12 @@ export default C=>({children,...rest})=>
       }
     )
   }
+  const modalClick=(e)=>e.stopPropagation()
   const props=
   {
-    onClickMenu,
-    innerRef
+    menuClick,
+    menuRef,
+    modalClick
   }
   return <C {...rest} {...props}>{{...state,...children}}</C>
 }

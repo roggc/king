@@ -5,18 +5,18 @@ import {V1 as Modal} from 'comps/modal/index'
 import {Link} from 'react-router-dom'
 
 const v1=
-({children,children:{showMenu},content,onClickMenu,innerRef,...rest})=>
+({children,children:{showMenu},content,menuClick,menuRef,modalClick,...rest})=>
 <div className={`${style.background} ${style.container}`} {...rest}>
   <div>
     {content}
   </div>
-  <div className={`${style.menu}`} onClick={onClickMenu} ref={innerRef}>
+  <div className={`${style.menu}`} onClick={menuClick} ref={menuRef}>
     <div>
       <i className="fas fa-bars"></i>
     </div>
     <Modal content=
       {
-        <div>
+        <div onClick={menuClick}>
           <div>
             <Link to="/">home</Link>
           </div>
@@ -25,7 +25,7 @@ const v1=
           </div>
         </div>
       }
-    style={{right: '75px'}}>{{...children,show:showMenu}}</Modal>
+    style={{right: '75px'}} onClick={modalClick}>{{...children,show:showMenu}}</Modal>
   </div>
 </div>
 
